@@ -27,3 +27,8 @@ class Snake:
     self.length = 3
     self.body = [(20,20),(20,40),(20,60)]
     self.direction = Direction.DOWN
+
+  def draw(self, game, window):
+    for segment in self.body:
+      game.draw.rect(window, self.color, (segment[0],segment[1],self.block_size, self.block_size))
+
